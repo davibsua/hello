@@ -1,0 +1,20 @@
+{% extends "shopping_list/layout.html" %}
+
+{% block body %}
+    <h1 class="tittles">Shopping list</h1>
+    <ul>
+        {% for item in shopping_list %}
+            <li>{{ item }}</li>
+        {% empty %}
+            <li>No tasks.</li>
+        {% endfor %}
+    </ul>
+    <div id="add">
+        <a href="{% url 'shopping_list:add' %}">Add a new item</a>
+    </div>
+    <div id="delete">
+        <a href="{% url 'shopping_list:delete' %}">Delete an item</a>
+    </div>
+
+
+{% endblock %}

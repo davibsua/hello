@@ -1,7 +1,7 @@
 {% extends "shopping_list/layout.html" %}
 {% block body %}
 
-    <h1> Add Item</h1>
+    <h1 id="tittle"> Add Item</h1>
     <form action="{% url 'shopping_list:add' %}" method="post">
         {% csrf_token %}
         <h2>{{ form }}</h2>
